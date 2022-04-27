@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Introduce el número para la criba de Erastótenes:");
         int dato = teclado.nextInt();
         int vector[] = new int[dato];
-        Primos primos = new Primos();
+        Primos primos = new Primos(dato);
         System.out.println("\nVector inicial hasta :" + dato);
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
@@ -16,7 +16,7 @@ public class Main {
             }
             System.out.print(i + 1 + "\t");
         }
-        vector = primos.generarPrimos(dato);
+        vector = primos.generarPrimos();
         System.out.println("\nVector de primos hasta:" + dato);
         for (int i = 0; i < vector.length; i++) {
             if (i % 10 == 0) {
