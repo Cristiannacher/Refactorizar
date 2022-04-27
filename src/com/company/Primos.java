@@ -1,7 +1,7 @@
 package com.company;
 
 public class Primos {
-    // Generar números primos de 1 a max
+
     private int max;
 
     public Primos(int max) {
@@ -19,7 +19,6 @@ public class Primos {
     public boolean[] comprovarPrimos(int dim, boolean[] esPrimo) {
         for (int i = 2; i < Math.sqrt(dim) + 1; i++) {
             if (esPrimo[i]) {
-                // Eliminar los múltiplos de i
                 for (int j = 2 * i; j < dim; j += i) {
                     esPrimo[j] = false;
                 }
@@ -50,17 +49,13 @@ public class Primos {
 
     public int[] generarPrimos() {
         if (max >= 2) {
-            // Declaraciones
-            int dim = max + 1; // Tamaño del array
+            int dim = max + 1;
             boolean[] esPrimo = iniciaArray(dim);
-            // Eliminar el 0 y el 1, que no son primos
             esPrimo[0] = esPrimo[1] = false;
-            //Comprovar primos
             esPrimo = comprovarPrimos(dim, esPrimo);
             return rellenaVectorDePrimos(dim,cuentaPrimos(dim,esPrimo),esPrimo);
-        } else { // max < 2
+        } else {
             return new int[0];
-            // Vector vacío
         }
     }
 }
