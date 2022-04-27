@@ -14,30 +14,22 @@ class PrimosTest {
     @Test
     void generarPrimos_100() {
         Primos primosClase = new Primos(100);
-        int[] primosMetodo = primosClase.generarPrimos();
-
-        assertArrayEquals(cien, primosMetodo);
+        assertArrayEquals(cien, primosClase.generarPrimos());
     }
 
     @Test
     void generarPrimos_vacio_1() {
         Primos primosClase = new Primos(1);
-        int[] primosMetodo = primosClase.generarPrimos();
-
-        assertArrayEquals(vacio, primosMetodo);
+        assertArrayEquals(vacio, primosClase.generarPrimos());
     }
     @Test
     void generarPrimos_vacio_0() {
         Primos primosClase = new Primos(0);
-        int[] primosMetodo = primosClase.generarPrimos();
-
-        assertArrayEquals(vacio, primosMetodo);
+        assertArrayEquals(vacio, primosClase.generarPrimos());
     }
     @Test
     void generarPrimos_1() {
         Primos primosClase = new Primos(2);
-        int[] primosMetodo = primosClase.generarPrimos();
-
-        assertArrayEquals(uno, primosMetodo);
+        assertArrayEquals(uno, primosClase.generarPrimos());
     }
 }
